@@ -1,0 +1,245 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+
+.invoiceContainer {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    font-size: 14px;
+    padding: 40px 0;
+}
+
+.invoiceLogo {
+  width: 30%;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+.invoiceHeader {
+    justify-items: center;
+    margin-bottom: 30px;
+}
+
+.clientDetails {
+    display: flex;
+   justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.client {
+    padding: 5px 10px;
+}
+
+.clientName, .invoicedAmount, .latestPaymentDate {
+    font-weight: 600;
+}
+
+.client p {
+  margin-bottom: 5px;
+}
+
+.paymentTerms {
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+.paymentTerms p {
+    margin-bottom: 5px;
+}
+
+.paymentTerms p:nth-child(4) {
+    margin-bottom: 0;
+}
+
+.references {
+    margin-bottom: 40px;
+}
+
+.bankDetails {
+    border: 1px solid black;
+    padding: 5px 10px;
+    margin-bottom: 60px;
+}
+
+#workTitle {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 60px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+th {
+    background-color: #ddd;
+    font-weight: bold;
+}
+
+tfoot {
+    font-weight: bold;
+}
+
+table td:nth-child(2),
+table th:nth-child(2) {
+  text-align: right;
+}
+
+table td:nth-child(3),
+table th:nth-child(3) {
+    text-align: right;
+}
+
+table td:nth-child(4),
+table th:nth-child(4) {
+    text-align: right;
+}
+
+table td:nth-child(1),
+table th:nth-child(1) {
+    text-align: left;
+}
+
+#total-row {
+    text-align: right;
+    font-weight: bold;
+}
+
+.IBAN, .BIC {
+    font-weight: 600;
+}
+
+.invoicefooter h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4d8bcd;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+}
+
+.company-info, .company-address {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.office, .email, .vat, .website, .account, .officeAddress {
+  display: flex;
+  gap: 30px;
+}
+
+.company-info div p:nth-of-type(1), .company-address div p:nth-of-type(1) {
+  color: #4d8bcd;
+  width: 100px;
+  font-weight: 700;
+}
+
+.company-info div p:nth-of-type(1) {
+  width: 50px;
+}
+
+.company-info div p:nth-of-type(2), .company-address div p:nth-of-type(2) {
+  width: 150px;
+  text-align: left;
+  color: gray;
+}
+
+.negative {
+  color: red;
+}
+
+#printInvoiceBtn {
+  margin-bottom: 20px;
+  padding: 5px 10px;
+  width: 150px;
+  border-radius: 8px;
+  border: 1px solid rgb(171, 171, 171);
+}
+
+#printInvoiceBtn:hover {
+  transform: scale(1.03);
+  background-color: black;
+  color: white;
+}
+
+
+/* Hide the print button when printing */
+@media print {
+  #printInvoiceBtn {
+      display: none;
+  }
+
+  /* Adjust margins and layout for printing */
+  body {
+      margin: 0;
+      padding: 0;
+  }
+
+  .invoiceContainer {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+  }
+
+  /* Ensure tables and text are readable */
+  table {
+      width: 100%;
+      border-collapse: collapse;
+  }
+
+  th, td {
+      border: 1px solid #000;
+      padding: 8px;
+      text-align: left;
+  }
+
+  /* Ensure negative values are still red */
+  .negative {
+      color: red;
+  }
+}

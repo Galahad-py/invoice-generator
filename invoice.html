@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="invoice.css">
+    <link href="https://fonts.bunny.net/css?family=inter:300,400,500,600,700,800|plus-jakarta-sans:300,500,600,700,800|poppins:100,200,300,400,500" rel="stylesheet" />
+
+    <script src="script.js" defer></script>
+
+    <script src="invoice.js" defer></script>
+</head>
+<body>
+    <div class="invoiceContainer">
+        <div class="invoiceLogo">
+            <img src="/images/photo_2025-01-30_03-58-05.jpg" alt="Mobile Labs Scandinavia AB">
+        </div>
+
+        <div class="invoiceHeader">
+            <h1>INVOICE <span class="invoiceNumber">000001</span></h1>
+        </div>
+
+        <div class="clientDetails">
+            <div class="client">
+                <p class="clientName"></p>
+                <p class="clientAddress"></p>
+                <p class="clientState"></p>
+            </div>
+
+            <div class="paymentTerms">
+                <p>Date: <span class="invoiceDate"></span></p>
+                <p>Payment conditions: <span class="paymentConditions"></span></p>
+
+                <p>Invoiced amount: <span class="invoicedAmount"></span></p>
+
+                <p>Latest payment date: <span class="latestPaymentDate"></span></p>
+            </div>
+        </div>
+
+        <div class="references">
+            <p>Your reference: <span class="yourReference"></span></p>
+            <p>Our reference: <span class="ourReference"></span></p>
+        </div>
+
+        <p id="workTitle"></p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Beskrivning</th>
+                    <th>Quantity</th>
+                    <th>Rate</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+
+            <tbody id="lineItemsTable">
+                
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="3" id="total-cell">Total</td>
+                    <td id="totalAmount"></td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <div class="bankDetails">
+            <h4 class="bankName">DKK BANK ACCOUNT</h4>
+            <p>IBAN: <span class="IBAN">SE8895700000005251799549</span></p>
+            <p>BIC: <span class="BIC">SPSDSE23</span></p>
+            <p>BANK: <span class="BANK">SPARBANKEN SYD</span></p>
+            <p>BANK ADDRESS: <span class="bankAddress">BOX 252, SE -271 25 YSTAD SWEDEN</span></p>
+        </div>
+
+        <button id="printInvoiceBtn">Print Invoice</button>
+
+        <footer class="invoicefooter">
+            <h3>MOBILE LABS SCANDINAVIA AB</h3>
+            <div class="footer-content">
+                <div class="company-info">
+                    <div class="office">
+                        <p>OFFICE</p>
+                        <p>+46 700 628506</p>
+                    </div>
+                    <div class="email">
+                        <p>E-MAIL</p>
+                        <p>richard@mobilelabs.se</p>
+                    </div>
+                    <div class="vat">
+                        <p>VAT.NO</p>
+                        <p>SE559244004301</p>
+                    </div>
+                </div>
+
+                <div class="company-address">
+                    <div class="officeAddress">
+                        <p>OFFICE ADDRESS</p>
+                        <p>Shop Redovisning / Göran Smedberg<br> Listorp Byrvalg 17 <br>275 93 Sjöbo</p>
+                    </div>
+                    <div class="website">
+                        <p>WEB</p>
+                        <p>www.mobilelabs.se</p>
+                    </div>
+                    <div class="account">
+                        <p>DKK ACCOUNT</p>
+                        <p>SE8895700000005251799549</p>
+                    </div>
+                </div>
+        </footer>
+</body>
+</html>
