@@ -1,0 +1,120 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    font-family: 'Inter', sans-serif;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+
+.form-container {
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    padding: 15px;
+}
+
+h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+label {
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    color: #333;
+}
+
+input {
+    font-size: 14px;
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.generateInvoiceBtn {
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 10px 20px;
+    border: 1px solid black;
+    background-color: transparent;
+}
+
+.generateInvoiceBtn:hover {
+    background-color: #f4f4f4;
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.line-item {
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.removeItemBtn {
+    font-size: 13px;
+    border-radius: 8px;
+    padding: 8px 20px;
+    border: 1px solid black;
+    background-color: transparent;
+}
+
+.removeItemBtn:hover {
+    background-color: #f4f4f4;
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+#addItemBtn {
+    font-size: 13px;
+    border-radius: 8px;
+    padding: 8px 20px;
+    border: 1px solid black;
+    background-color: transparent;
+}
+
+#addItemBtn:hover {
+    background-color: #f4f4f4;
+    cursor: pointer;
+    transform: scale(1.02);
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=inter:300,400,500,600,700,800|plus-jakarta-sans:300,500,600,700,800|poppins:100,200,300,400,500" rel="stylesheet" />
+
+    <script src="script.js" defer></script>
+    <script src="invoice-script.js" defer></script>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Invoice Details</h1>
+        <form id="invoiceForm">
+            <div class="form-grid">
+                <!-- Invoice Details -->
+                <div class="form-group">
+                    <h3>Invoice Details</h3>
+                    <label for="InvoiceNumber">Invoice Number:</label>
+                    <input type="number" name="InvoiceNumber" id="invoiceNumber" required min="0">
+    
+                    <label for="InvoiceDate">Invoice Date:</label>
+                    <input type="date" name="InvoiceDate" id="invoiceDate" required>
+    
+                    <label for="paymentConditions">Payment Conditions:</label>
+                    <input type="text" name="paymentConditions" id="paymentConditions" required>
+    
+                    <label for="latestPaymentDate">Latest Payment Date:</label>
+                    <input type="date" name="latestPaymentDate" id="latestPaymentDate" required>
+    
+                    <label for="invoicedAmount">Invoiced Amount:</label>
+                    <input type="number" name="invoicedAmount" id="invoicedAmount" required>
+                </div>
+    
+                <!-- Client Information -->
+                <div class="form-group">
+                    <h3>Client Information</h3>
+                    <label for="ClientName">Client Name:</label>
+                    <input type="text" name="ClientName" id="clientName" required>
+    
+                    <label for="ClientAddress">Client Address:</label>
+                    <input type="text" name="ClientAddress" id="clientAddress" required>
+
+                    <label for="ClientState">Client State:</label>
+                    <input type="text" name="ClientState" id="clientState" required>
+    
+                    <label for="yourReference">Your Reference:</label>
+                    <input type="text" id="yourReference" name="yourReference" required>
+
+                    <label for="ourReference">Our Reference:</label>
+                    <input type="text" id="ourReference" name="ourReference" required>
+                </div>
+    
+                <!-- Line Items -->
+                <div class="form-group">
+                    <h3>Billing Details</h3>
+
+                    <label for="workTitle">Work Title:</label>
+                    <input type="text" id="workTitle" name="workTitle" required>
+
+                    <div id="lineItems">
+                        <!-- Default line item -->
+                        <div class="line-item">
+                            <label for="description">Description:</label>
+                            <input type="text" name="description" class="description" required>
+    
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" name="quantity" class="quantity" required min="0">
+    
+                            <label for="rate">Rate:</label>
+                            <input type="number" name="rate" class="rate" required min="0">
+    
+                            <button type="button" class="removeItemBtn">Remove</button>
+                        </div>
+                    </div>
+                    <button type="button" id="addItemBtn">Add Another Item</button>
+                </div>
+            </div>
+        </form>
+        <button class="generateInvoiceBtn">Generate Invoice</button>
+    </div>    
+</body>
+</html>
